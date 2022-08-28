@@ -9,7 +9,7 @@
 //write result in result list
 //append result to end of list
 //scroll list to the bottom
-
+"use strict";
 window.addEventListener("load", startcalc);
 
 function startcalc() {
@@ -18,13 +18,22 @@ function startcalc() {
 
 function calculate() {
   //read the first number
-  let firstnumber = document.getElementById("firstnumber").value;
+
+  let firstnumber = Number(document.getElementById("firstnumber").value);
   let operator = document.getElementById("operator").value;
-  let secondnumber = document.getElementById("secondnumber").value;
+  let secondnumber = Number(document.getElementById("secondnumber").value);
   let result = document.getElementById("results").value;
   console.log(firstnumber);
-  console.log(operator);
   if (operator === "add") {
     console.log(firstnumber + secondnumber);
+  }
+  if (operator === "sub") {
+    console.log(firstnumber - secondnumber);
+  }
+  if (operator === "mul") {
+    console.log(firstnumber * secondnumber);
+  }
+  if (operator === "div") {
+    console.log(firstnumber / secondnumber);
   }
 }
