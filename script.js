@@ -35,10 +35,10 @@ function calculate() {
 }
 
 function dorounding() {
-  addlist();
+  showResults();
 }
 
-function addlist() {
+function showResults() {
   //show the result
   document.getElementById("firstnumber").value = result;
   let li = document.createElement("li");
@@ -46,8 +46,4 @@ function addlist() {
   // li.appendChild(document.createTextNode("four"));
   resultsList.append(li);
   resultsList.scrollTo(0, 100000000);
-}
-
-function clear() {
-  document.getElementById("clear").addEventListener("click", startcalc);
 }
