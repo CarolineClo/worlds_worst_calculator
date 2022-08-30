@@ -47,3 +47,11 @@ function showResults() {
   resultsList.append(li);
   resultsList.scrollTo(0, 100000000);
 }
+
+document.getElementById("clear").addEventListener("click", clearCalc);
+
+function clearCalc() {
+  while (resultsList.hasChildNodes()) {
+    resultsList.removeChild(resultsList.firstChild);
+  }
+}
